@@ -4,7 +4,7 @@ class Database
     private static $dbName = 'db_submission';
     private static $dbHost = 'furqonmysql.mysql.database.azure.com';
     private static $dbUsername = 'furqoncreative@furqonmysql';
-    private static $dbUserPassword = 'Smknsitur4j473';
+    private static $dbUserPassword = '*****************';
     private static $options = array(
         PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
         PDO::MYSQL_ATTR_SSL_CA => 'https://github.com/furqoncreative/AzureSubs1/blob/master/inc/BaltimoreCyberTrustRoot.crt.pem',
