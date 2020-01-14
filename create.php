@@ -7,10 +7,13 @@
         $phoneError = null;
         $addressError = null;
 
+
         $name = $_POST['name'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
         $address = $_POST['address'];
+        $date = date("Y-m-d");
+
 
         $valid = true;
         if (empty($name)) {
@@ -39,9 +42,9 @@
         if ($valid) {
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = 'INSERT INTO users (name, email, phone, address) values(?, ?, ?, ?)';
+            $sql = 'INSERT INTO users (name, email, phone, address, date) values(?, ?, ?, ?,?)';
             $q = $pdo->prepare($sql);
-            $q->execute(array($name, $email, $phone, $address));
+            $q->execute(array($name, $email, $phone, $address, $date));
             Database::disconnect();
             header('Location: index.php');
         }

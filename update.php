@@ -20,6 +20,7 @@
         $email = $_POST['email'];
         $phone = $_POST['phone'];
         $address = $_POST['address'];
+        $date = date("Y-m-d");
 
         $valid = true;
 
@@ -50,8 +51,8 @@
         if ($valid) {
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $q = $pdo->prepare('UPDATE user set name = ?, email = ?, phone = ?, phone = ? WHERE id = ?');
-            $q->execute(array($name, $email, $phone, $address, $id));
+            $q = $pdo->prepare('UPDATE user set name = ?, email = ?, phone = ?, phone = ?, date =? WHERE id = ?');
+            $q->execute(array($name, $email, $phone, $address, $date, $id));
             Database::disconnect();
             header('Location: index.php');
         }

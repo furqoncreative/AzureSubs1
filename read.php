@@ -52,6 +52,12 @@
                 </p>
             </div>
             <div class="form-group">
+                <label class="col-sm-2 control-label">Date</label>
+                <p class="checkbox col-sm-6">
+                    <?php echo $data['date'];?>
+                </p>
+            </div>
+            <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                     <a class="btn btn-default" href="index.php">Back</a>
                 </div>

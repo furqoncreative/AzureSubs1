@@ -14,6 +14,7 @@
                     <th>Email Address</th>
                     <th>Phone Number</th>
                     <th>Address </th>
+                    <th>Date</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -32,6 +33,7 @@
                             echo '<td>'. $row['email'] . '</td>' . PHP_EOL;
                             echo '<td>'. $row['phone'] . '</td>' . PHP_EOL;
                             echo '<td>'. $row['address'] . '</td>' . PHP_EOL;
+                            echo '<td>'. $row['date'] . '</td>' . PHP_EOL;
                             echo '<td>' . PHP_EOL;
                             echo '<a class="btn btn-default" href="read.php?id='.$row['id'].'">Read</a>' . PHP_EOL;
                             echo '<a class="btn btn-success" href="update.php?id='.$row['id'].'">Update</a>' . PHP_EOL;
