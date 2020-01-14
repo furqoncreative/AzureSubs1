@@ -7,7 +7,7 @@ class Database
     private static $dbUserPassword = 'Smknsitur4j473';
     private static $options = array(
         PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
-        PDO::MYSQL_ATTR_SSL_CA => 'BaltimoreCyberTrustRoot.crt.pem',
+        PDO::MYSQL_ATTR_SSL_CA => 'https://github.com/furqoncreative/AzureSubs1/blob/master/inc/BaltimoreCyberTrustRoot.crt.pem',
         PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => true,
     );
     private static $cont = null;
